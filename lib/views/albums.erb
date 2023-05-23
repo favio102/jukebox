@@ -1,0 +1,12 @@
+<h2>Artist: <%= artist %> </h2>
+<h2>Album: <%= album %> </h2>
+<h2>Tracks: </h2>
+<ol class="list-group">
+  <% tracks.each do |track| %>
+    <li class="list-group-item mb-2">
+       <a href="/tracks/<%= track[0] %>"><%= track[1] %></a><br>
+    </li>
+  <% end %>
+</ol>
+
+<a href="/" class="btn btn-dark">Back to home</a>

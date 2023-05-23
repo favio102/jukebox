@@ -1,0 +1,7 @@
+<h2>Artists</h2>
+<ol class="list-group p-1">
+  <% artists = DB.execute("SELECT artists.id, artists.name FROM artists ORDER BY name ASC") %>
+  <% artists.each do |artist| %>
+    <li class="list-group-item"><a href="artists/<%= artist[0] %>"><%= artist[1] %></a></li>
+  <% end %>
+</ol>

@@ -1,0 +1,8 @@
+<h2>Available list albums of <%= artist %> </h2>
+<ol class="list-group">
+  <% albums.each do |album| %>
+    <li class="list-group-item"><a href="/albums/<%= album[0] %>"><%= album[1] %></a> Genre: <%= album[2] %></li>
+  <% end %>
+</ol>
+
+<a href="/" class="btn btn-dark">Back to home</a>
