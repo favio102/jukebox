@@ -2,7 +2,7 @@ require "sinatra"
 require "sinatra/reloader" if development?
 # require "pry-byebug"
 require "sqlite3"
-set :bind, "0.0.0.0"
+# set :bind, "0.0.0.0"
 
 DB = SQLite3::Database.new(File.join(File.dirname(__FILE__), "db/jukebox.sqlite"))
 query_a = "SELECT name FROM artists WHERE id = ?"
